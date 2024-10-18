@@ -35,6 +35,48 @@ Cloud-native Deployment of IoT Data Analytics Pipeline using Kubernetes and Dock
      - Ensure each producer instance has a unique ID to distinguish between them during operation.
      - Test the solution with up to 5 producers, as done in PA3, but this time leverage Kubernetes to automatically manage the placement of containers.
 
+## Technologies Used
+1. Python 3
+2. Apache Kafka
+3. MongoDB
+4. Chameleon Cloud with Ubuntu Linux version 22.04 image (CC-Ubuntu22.04 on Chameleon)
+5. CIFAR-10 image data set used by the IoT source.
+6. Docker
+7. Ansible
+8. Kubernetes
+
+## Instructions for setting up the technologies used
+
+1. Install the following Python packages through your chosen CLI.
+
+```
+pip3 install kafka-python
+pip3 install torch torchvision
+pip3 install pymongo
+```
+
+2. Install Docker Image for Apache Kafka.
+
+```
+docker pull apache/kafka
+```
+
+3. Download Apache Kafka on your chosen directory using wget or curl -0 command.
+
+```
+wget https://downloads.apache.org/kafka/3.8.0/kafka_2.13-3.8.0.tgz
+```
+
+```
+curl -O https://downloads.apache.org/kafka/3.8.0/kafka_2.13-3.8.0.tgz
+```
+
+Then, unzip the file, and move to the kafka directory.
+
+```
+tar -xzf kafka_2.13-3.8.0.tgz
+cd kafka_2.13-3.8.0
+```
 
 ## How work was split
 
