@@ -1,0 +1,4 @@
+kafka-python
+Pillow
+torchvision
+numpy
