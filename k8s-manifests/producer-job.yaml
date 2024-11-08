@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: producer-job-1
+spec:
+  template:
+    spec:
+      nodeSelector:
+        kubernetes.io/hostname: vm1  # Replace with a node without disk pressure
+      hostNetwork: true
+      dnsPolicy: ClusterFirstWithHostNet
+      containers:
+      - name: producer
+        image: 192.168.5.56:5000/producer:latest
+        imagePullPolicy: Always
+        env:
+        - name: KAFKA_BROKER
+          value: "kafka-service:9092"
+      restartPolicy: Never
