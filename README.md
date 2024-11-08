@@ -78,11 +78,27 @@ tar -xzf kafka_2.13-3.8.0.tgz
 cd kafka_2.13-3.8.0
 ```
 
+Build and push Docker images found in the dockerfiles/ directory. All of the .yaml files to set up and run the Kubernetes are in the k8s-manifests/ directory. Ensure VMs firewalls are off.
+
+### Latency Data
+Latency logs were recorded in the following files for each VM:
+- `latency_vm1.log` (1 producer)
+- `latency_vm2.log` (2 producers)
+- `latency_vm3.log` (3 producers)
+- `latency_vm4.log` (4 producers)
+
+### CDF of Latency
+Below is the CDF plot that visualizes the latency for each scenario:
+
+![Latency CDF](latency_cdf.png)
+
+Again, we found that having 3 producers was the worst in terms of latency. We do not know why, but attribute this to limited data.
+
 ## How work was split
 
-* Robert Sheng primarily worked on...
-* Youngjae Moon primarily worked on...
-* Lisa Liu primarily worked on...
+* Robert Sheng primarily worked on setting up the Dockerfiles and getting them ready for the project.
+* Youngjae Moon primarily worked on Kubernetes deployment.
+* Lisa Liu primarily worked on extension of the producers into data from 4 producers.
 
 ## Team Members
 
