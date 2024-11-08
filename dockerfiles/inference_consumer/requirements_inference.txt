@@ -1,0 +1,6 @@
+kafka-python
+Pillow
+torch
+torchvision
+Flask
+requests
